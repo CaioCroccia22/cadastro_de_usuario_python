@@ -11,13 +11,14 @@ else:
 
 with open('alunos.txt', 'r', encoding='UTF-8') as file:
     for line in file:
+        sleep(1)
         # print(line.split(',')[0])
         # print(line.split(',')[1])
         aluno = line.split(',')[0]
         email = line.split(',')[1]
-        pyautogui.click(304,314, duration=3)
+        pyautogui.click(351,340, duration=3)
         pyautogui.write(aluno)
-        pyautogui.click(355,350, duration=3)
+        pyautogui.click(324,378, duration=3)
         pyautogui.write(email)
-        pyautogui.click(338,378, duration=3)
-        
+        pyautogui.click(363,399, duration=3)
+        sleep(1)
