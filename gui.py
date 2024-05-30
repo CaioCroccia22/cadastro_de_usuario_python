@@ -5,6 +5,16 @@ root = tk.Tk()
 
 root.title('cadastro de Alunos')
 
+
+# Função para adicionar os alunos
+def add_student():
+    name = entry_name.get()
+    email = entry_email.get()
+    
+    tree.insert('', tk.END, values=(name, email))
+    entry_name.delete(0, tk.END)
+    entry_email.delete(0, tk.END)
+
 # 1 - Criando tabela Treeview
 tree = ttk.Treeview(root, columns=('Name', 'Email'))
 tree.heading('Name', text='Name')
@@ -25,7 +35,7 @@ entry_email.pack()
 
 
 # Botão para adicionar User
-butto_add = tk.Button(root, text='Adicionar Aluno')
+butto_add = tk.Button(root, text='Adicionar Aluno', command=add_student)
 butto_add.pack()
 
 
